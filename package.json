@@ -1,0 +1,61 @@
+{
+  "name": "IncidentManagement",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "dependencies": {
+    "@cap-js/hana": "^2",
+    "@sap/cds": "^9.6.4",
+    "@sap/xssec": "^4",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/cds-test": "^0.4.1",
+    "@cap-js/sqlite": "^2",
+    "@sap/cds-dk": "^9",
+    "cds-plugin-ui5": "^0.13.0"
+  },
+  "cds": {
+    "requires": {
+      "[development]": {
+        "auth": {
+          "kind": "mocked",
+          "users": {
+            "alice": {
+              "roles": [
+                "admin",
+                "support"
+              ]
+            },
+            "bob": {
+              "roles": [
+                "support"
+              ]
+            }
+          }
+        }
+      },
+      "[production]": {
+        "db": "hana",
+        "auth": "xsuaa"
+      },
+      "[hybrid]": {
+        "auth": "xsuaa"
+      },
+      "destinations": true,
+      "html5-repo": true,
+      "workzone": true
+    }
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-r2rmodule": "cds watch --open appns.r2rmodule/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "test": "npx jest tests/test.js"
+  },
+  "private": true,
+  "workspaces": [
+    "app/*"
+  ],
+  "sapux": [
+    "app/r2rmodule"
+  ]
+}
