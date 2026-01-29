@@ -12,10 +12,10 @@ jobs:
       - name: Deploy to SAP BTP DEV via CTMS
         uses: mauriciolauffer/deploy-to-sap-btp-with-ctms@main
         with: 
-          CTMS_TOKEN_SERVICE_URL: https://4207ef80trial.authentication.us10.hana.ondemand.com//oauth/token
-          CTMS_CLIENT_ID: ${{ secrets.CTMS_CLIENT_ID }}
-          CTMS_CLIENT_SECRET: ${{ secrets.CTMS_CLIENT_SECRET }}
-          CTMS_TR_USER_NAME: ${{ secrets.CTMS_TR_CLIENT_ID }}
+          CTMS_TOKEN_SERVICE_URL: https://4207ef80trial.authentication.us10.hana.ondemand.com/oauth/token
+          CTMS_CLIENT_ID: sb-bcb71540-a132-4342-9934-d1b4a52dfcb8!b583812|alm-ts-backend!b1603
+          CTMS_CLIENT_SECRET: ba4bb210-336b-4853-b347-5c6239fded59$yHW9P9CsLErEfbcppxLlULyd5_detTEQaPh1vLV0KgM=
+          CTMS_TR_USER_NAME: kishorekumar.gudimetla@astrazeneca.com
           CTMS_API_URL:  https://transport-service-app-backend.ts.cfapps.ap10.hana.ondemand.com/v2
           CTMS_NODE_NAME: dev
           CTMS_FILE_PATH: gen/mta.tar
