@@ -1,0 +1,24 @@
+name: SAP BTP deployment with CTMS
+on:
+  push:
+    branches: [main]
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - run: npm ci
+      - run: npm run build
+      - name: Deploy to SAP BTP DEV via CTMS
+        uses: mauriciolauffer/deploy-to-sap-btp-with-ctms@main
+        with: # The following parameters are just examples, you should change them as needed
+          CTMS_TOKEN_SERVICE_URL: ${{ secrets.CTMS_TOKEN_SERVICE_URL }}
+          CTMS_CLIENT_ID: ${{ secrets.CTMS_CLIENT_ID }}
+          CTMS_CLIENT_SECRET: ${{ secrets.CTMS_CLIENT_SECRET }} 
+          CTMS_API_URL: ${{ secrets.CTMS_API_URL }}
+          CTMS_NODE_NAME: dev
+          CTMS_FILE_PATH: gen/archive.mtar
+          CTMS_TR_DESCRIPTION: Automated deployment from GitHub Actions
+          CTMS_TR_CONTENT_TYPE: MTA
+          CTMS_TR_STORAGE_TYPE: FILE
