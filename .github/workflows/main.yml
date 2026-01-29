@@ -19,7 +19,7 @@ jobs:
           CTMS_TR_PASSWORD: ${{ secrets.CTMS_TR_PASSWORD }}
           CTMS_API_URL:  https://transport-service-app-backend.ts.cfapps.ap10.hana.ondemand.com/v2
           CTMS_NODE_NAME: dev
-          CTMS_FILE_PATH: ./gen/mta.tar
+          CTMS_FILE_PATH: gen/mta.tar
           CTMS_TR_DESCRIPTION: Automated deployment from GitHub Actions
           CTMS_TR_CONTENT_TYPE: MTA
           CTMS_TR_STORAGE_TYPE: FILE
