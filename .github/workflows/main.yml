@@ -16,7 +16,7 @@ jobs:
           CTMS_CLIENT_ID: sb-bcb71540-a132-4342-9934-d1b4a52dfcb8!b583812|alm-ts-backend!b1603
           CTMS_CLIENT_SECRET: ba4bb210-336b-4853-b347-5c6239fded59$yHW9P9CsLErEfbcppxLlULyd5_detTEQaPh1vLV0KgM=
           CTMS_TR_USER_NAME: kishorekumar.gudimetla@astrazeneca.com
-          CTMS_API_URL:  https://transport-service-app-backend.ts.cfapps.ap10.hana.ondemand.com/v2
+          CTMS_API_URL:  https://transport-service-app-backend.ts.cfapps.us10.hana.ondemand.com/v2
           CTMS_NODE_NAME: dev
           CTMS_FILE_PATH: gen/mta.tar
           CTMS_TR_DESCRIPTION: Automated deployment from GitHub Actions
