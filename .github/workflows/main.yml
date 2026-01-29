@@ -17,7 +17,7 @@ jobs:
           CTMS_CLIENT_SECRET: ${{ secrets.CTMS_CLIENT_SECRET }} 
           CTMS_API_URL: ${{ secrets.CTMS_API_URL }}
           CTMS_NODE_NAME: dev
-          CTMS_FILE_PATH: gen/archive.mtar
+          CTMS_FILE_PATH: gen/mta.tar
           CTMS_TR_DESCRIPTION: Automated deployment from GitHub Actions
           CTMS_TR_CONTENT_TYPE: MTA
           CTMS_TR_STORAGE_TYPE: FILE
