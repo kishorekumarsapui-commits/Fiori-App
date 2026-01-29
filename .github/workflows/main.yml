@@ -15,8 +15,7 @@ jobs:
           CTMS_TOKEN_SERVICE_URL: ${{ secrets.CTMS_TOKEN_SERVICE_URL }}
           CTMS_CLIENT_ID: ${{ secrets.CTMS_CLIENT_ID }}
           CTMS_CLIENT_SECRET: ${{ secrets.CTMS_CLIENT_SECRET }}
-          CTMS_TR_CLIENT_ID: ${{ secrets.CTMS_TR_CLIENT_ID }}
-          CTMS_TR_PASSWORD: ${{ secrets.CTMS_TR_PASSWORD }}
+          CTMS_TR_USER_NAME: ${{ secrets.CTMS_TR_CLIENT_ID }}
           CTMS_API_URL:  https://transport-service-app-backend.ts.cfapps.ap10.hana.ondemand.com/v2
           CTMS_NODE_NAME: dev
           CTMS_FILE_PATH: gen/mta.tar
