@@ -9,7 +9,6 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
       - run: npm ci
-      - run: npm run build
       - run: npm i -g mbt
       - run: mbt build -t gen --mtar mta.tar  
       - name: Deploy to SAP BTP DEV via CTMS
