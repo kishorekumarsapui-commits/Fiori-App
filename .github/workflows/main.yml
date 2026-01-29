@@ -11,7 +11,7 @@ jobs:
       - run: npm ci
       - name: Deploy to SAP BTP DEV via CTMS
         uses: mauriciolauffer/deploy-to-sap-btp-with-ctms@main
-        with: # The following parameters are just examples, you should change them as needed
+        with: 
           CTMS_TOKEN_SERVICE_URL: ${{ secrets.CTMS_TOKEN_SERVICE_URL }}
           CTMS_CLIENT_ID: ${{ secrets.CTMS_CLIENT_ID }}
           CTMS_CLIENT_SECRET: ${{ secrets.CTMS_CLIENT_SECRET }}
